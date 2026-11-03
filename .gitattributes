@@ -1,0 +1,12 @@
+# Automatically detect text files and preserve binary files.
+* text=auto
+
+# Consistent cross-platform text line endings.
+*.py text eol=lf
+*.md text eol=lf
+*.toml text eol=lf
+
+# Repository metadata and license.
+.gitignore text eol=lf
+.gitattributes text eol=lf
+LICENSE text eol=lf
