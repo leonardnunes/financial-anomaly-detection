@@ -210,12 +210,11 @@ Experiments should use synthetic or appropriately authorized datasets.
 
 ## Current Status
 
-Initial detector implemented.
+The initial statistical anomaly detector is implemented and the repository is publicly available.
 
-25 automated tests passed locally.
+25 automated tests pass locally and in GitHub Actions.
 
-Additional statistical validation and publication checks are pending.
-
+Reproducible evaluations using synthetic financial data, methodological assumptions, and limitations are documented. Validation with appropriately authorized real-world data remains future work.
 ## License
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
