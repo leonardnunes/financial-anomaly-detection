@@ -127,17 +127,57 @@ The current suite contains 25 tests, all passing in the local development enviro
 
 The tests cover basic calculations, monetary precision, input validation, insufficient samples, zero-MAD cases, generators, and multiple candidates.
 
+## Experimental Evaluation
+
+The project includes reproducible experiments
+using labeled synthetic financial observations.
+
+The experiments investigate detection performance,
+false-positive behavior, skewed distributions,
+zero-MAD limitations, and threshold calibration.
+
+Available experiments:
+
+- evaluate_synthetic.py: initial labeled examples.
+- evaluate_repeated.py: repeated synthetic simulations.
+- compare_methods.py: raw MAD, scaled MAD, and IQR.
+- evaluate_skewed_injections.py: injected anomalies
+  in right-skewed distributions.
+- calibrate_holdout.py: separate threshold calibration
+  and holdout evaluation.
+
+All scripts are located in the examples directory.
+
+After installing the package, run experiments
+from the repository root. For example:
+
+    .\.venv\Scripts\python.exe -B .\examples\calibrate_holdout.py
+
+The statistical findings, assumptions, and
+limitations are documented in docs/evaluation.md.
+
+All reported performance metrics apply only to
+the specified synthetic experiments.
+
+No real-world fraud detection accuracy or
+production readiness is claimed.
 ## Project Structure
 
     financial-anomaly-detection/
       docs/
         methodology.md
+        evaluation.md
       src/
         financial_anomaly_detection/
           __init__.py
           detector.py
       examples/
         basic_usage.py
+        evaluate_synthetic.py
+        evaluate_repeated.py
+        compare_methods.py
+        evaluate_skewed_injections.py
+        calibrate_holdout.py
       tests/
         test_detector.py
         test_detector_edge_cases.py
